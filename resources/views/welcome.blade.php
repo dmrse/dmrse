@@ -81,14 +81,20 @@
                 <div class="title m-b-md">
                     DMRSE
                 </div>
-         
+
 
                 <div class="links">
-                    <a href="/doce">Documentation</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('/doce') }}">Documentation</a>
+                    <a href="{{ url('/news') }}">News</a>
+                    <a href="{{ url('/news') }}">Creators</a>
+                    <a href="https://github.com/dmrse/dmrse">GitHub</a>
+                </div>
+
+                <hr>
+                <div class="links">
+                    <a href="{{ url('/place') }}">
+                        <span>my place</span>
+                    </a>
                 </div>
             </div>
         </div>

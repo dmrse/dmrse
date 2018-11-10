@@ -15,6 +15,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/doce', function () {
+    return view('doce.index');
+});
+
+
+Route::get('/news', function () {
+    return view('news.index');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'pay', 'middleware' => ['auth']], function () {
+    Route::get('/', 'PayController@index');
+});
+
+
+Route::group(['prefix' => 'place', 'middleware' => ['auth']], function () {
+    Route::get('/', 'MyPlaceController@index');
+    Route::get('/pay', 'MyPlaceController@index');
+});
+
+
