@@ -2,19 +2,89 @@
 
 namespace Dmrse\Http\Controllers;
 
+use Dmrse\MyPlace;
 use Illuminate\Http\Request;
+
+
 
 class MyPlaceController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
 
-        $name = 'Dmrse';
+        $MyPlaces = MyPlace::all();
 
-        $id = '7236A0A72036C3B19B01922B266DDDCFE9A2A2AD7CEB6F1E368CE3619E8D64E3';
+        return view('place.index', compact('MyPlaces'));
+    }
 
-        $OAuth2_client_secret = '00BD5F98A1BC14D0B7BA38D421796C10FE08FBB61D3F82E63B9151846060024BDE2592F7B2B3135E3ABA6F1C87AB3C5A5A61AE01BD8CDEBFC53CE9BAECD44DD';
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
-        return view('place.index');
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \Dmrse\MyPlace  $myPlace
+     * @return \Illuminate\Http\Response
+     */
+    public function show(MyPlace $myPlace)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \Dmrse\MyPlace  $myPlace
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(MyPlace $myPlace)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Dmrse\MyPlace  $myPlace
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, MyPlace $myPlace)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \Dmrse\MyPlace  $myPlace
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(MyPlace $myPlace)
+    {
+        //
     }
 }

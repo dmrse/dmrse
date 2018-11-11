@@ -30,14 +30,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+
+Route::resource('place', 'MyPlaceController' ,['middleware' => ['auth']]);
+
+
 Route::group(['prefix' => 'pay', 'middleware' => ['auth']], function () {
-    Route::get('/', 'PayController@index');
+    Route::get('/', 'Pay\PayController@index');
+    Route::get('/create', 'MyPlaceController@create');
 });
 
-
-Route::group(['prefix' => 'place', 'middleware' => ['auth']], function () {
-    Route::get('/', 'MyPlaceController@index');
-    Route::get('/pay', 'MyPlaceController@index');
-});
 
 

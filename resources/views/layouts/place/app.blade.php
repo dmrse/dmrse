@@ -9,25 +9,30 @@
 
     <title>{{ config('app.name', 'Dmrse') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" href="Oreo/html-dark/assets/plugins/bootstrap/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="Oreo/html-dark/assets/css/main.css">
+        <link rel="stylesheet" href="Oreo/html-dark/assets/css/color_skins.css">
 
 
 </head>
 </body>
 
-        <main class="py-4">
+
             @yield('content')
-        </main>
 
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+<!-- Jquery Core Js -->
+<script src="Oreo/html-dark/assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="Oreo/html-dark/assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+
+<script src="Oreo/html-dark/assets/plugins/bootstrap-notify/bootstrap-notify.js"></script> <!-- Bootstrap Notify Plugin Js -->
+
+<script src="Oreo/html-dark/assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+<script src="Oreo/html-dark/assets/js/pages/ui/notifications.js"></script> <!-- Custom Js -->
 </body>
 </html>
