@@ -31,6 +31,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+Route::group(['prefix' => 'contest', 'middleware' => ['auth']], function () {
+    Route::get('/', 'Contest\ContestController@index');
+    Route::get('/download', 'Contest\ContestController@create');
+    Route::post('/upload', 'Contest\ContestController@upload');
+    Route::post('/vote', 'Contest\ContestController@update');
+});
+
 Route::resource('place', 'MyPlaceController' ,['middleware' => ['auth']]);
 
 

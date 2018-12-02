@@ -86,7 +86,7 @@
                 <div class="links">
                     <a href="{{ url('/doce') }}">Documentation</a>
                     <a href="{{ url('/news') }}">News</a>
-                    <a href="{{ url('/news') }}">Creators</a>
+                    <a href="{{ url('/contest') }}">Contest</a>
                     <a href="https://github.com/dmrse/dmrse">GitHub</a>
                 </div>
 
